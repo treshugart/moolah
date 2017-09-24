@@ -43,10 +43,11 @@
   "dependencies": {
     "@skatejs/renderer-preact": "^0.0.1",
     "@skatejs/val": "^0.3.1",
+    "localforage": "^1.5.0",
     "mobx": "^3.3.0",
     "page": "^1.7.1",
     "preact": "^8.2.5",
-    "skatejs": "^5.0.0-beta.2"
+    "skatejs": "^5.0.0-beta.3"
   },
   "author": "Trey Shugart <treshugart@gmail.com>",
   "license": "ISC"

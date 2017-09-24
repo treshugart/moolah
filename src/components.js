@@ -95,6 +95,9 @@ export const Route = define(
 
 export const Router = define(
   class Router extends Component {
+    static props = {
+      options: props.object
+    };
     childrenChangedCallback() {
       [...this.children].forEach(route => {
         page(route.path, (ctxt, next) => {
@@ -108,8 +111,14 @@ export const Router = define(
       });
       page.start();
     }
+    propsUpdatedCallback(next, prev) {
+      page(next.options);
+      return super.propsUpdatedCallback(next, prev);
+    }
     renderCallback() {
       return <slot />;
     }
   }
 );
+
+console.log(Component.props);

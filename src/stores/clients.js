@@ -1,15 +1,13 @@
 // @flow
 
-import { autorun, computed, observable } from 'mobx';
+import Base from './base';
 
 type Client = {
   name: string
 };
 
-type ClientStore = {
-  clients: Array<Client>
-};
+class Clients extends Base {
+  items: Array<Client>;
+}
 
-export default observable({
-  clients: []
-});
+export default new Clients();

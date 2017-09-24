@@ -12,7 +12,7 @@ define(
         <div>
           <Nav />
           <Body>
-            <Router>
+            <Router hashbang popstate={false} dispatch={false}>
               <Route page={() => import('./pages')} path="/" />
               <Route page={() => import('./pages/clients')} path="/clients" />
               <Route page={() => import('./pages/invoices')} path="/invoices" />
