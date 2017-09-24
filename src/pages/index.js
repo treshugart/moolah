@@ -40,7 +40,7 @@ export default define(
             <input
               name="client"
               type="text"
-              events={{ keydown: link(this) }}
+              events={{ keyup: link(this) }}
               value={client}
             />
             <button type="submit">Add client</button>
@@ -66,7 +66,7 @@ export default define(
             <input
               name="invoice"
               type="text"
-              events={{ keydown: link(this) }}
+              events={{ keyup: link(this) }}
               value={invoice}
             />
             <button type="submit">Add client</button>

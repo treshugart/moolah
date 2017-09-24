@@ -17,13 +17,10 @@ export function observer(Component) {
       // This dynamically adds props post construction, so this happens for every instance that is created. One way to
       // make this more efficient is to allow for this as an edge case, but to use staticially defined stores on the
       // class instead.
-      Component.props = {
-        ...Component.props,
-        ...Object.keys(stores).reduce((prev, curr) => {
-          prev[curr] = props.array;
-          return prev;
-        }, {})
-      };
+      Component.props = Object.keys(stores).reduce((prev, curr) => {
+        prev[curr] = props.array;
+        return prev;
+      }, {});
 
       // Define an updater for each store. Doing this separately for each store ensures that if one store is updated,
       // the others aren't triggered.
