@@ -120,5 +120,3 @@ export const Router = define(
     }
   }
 );
-
-console.log(Component.props);
